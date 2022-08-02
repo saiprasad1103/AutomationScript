@@ -1,5 +1,7 @@
 package automationscript;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.awt.Robot;
 import java.util.Iterator;
 import java.util.Set;
@@ -13,9 +15,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.android.nativekey.KeyEvent;
 
-public class Searchandorder {
-
-	public class Search extends Lanuch 
+public class Searchandorder extends Lanuch 
 	{
 	@Test
 	(priority = 2) 
@@ -23,12 +23,12 @@ public class Searchandorder {
 	{ 
 	driver.findElement(By.xpath("//a[.='All Mobiles']")).click(); 
 	WebElement ele = driver.findElement(By.xpath("//b[.='All Mobile Details']"));
-     Assert.assertTrue(ele.isDisplayed()); 
+     AssertJUnit.assertTrue(ele.isDisplayed()); 
 	driver.findElement(By.id("myInput")).sendKeys("Apple Iphone 13"); 
 	Thread.sleep(2000); 
 	JavascriptExecutor j = (JavascriptExecutor) driver; 
 	j.executeScript("window.scrollBy(0,700)"); 
-	Assert.assertTrue(driver.findElement(By.xpath("//h2[.='Our New Feature Courses']")).isDisplayed()); 
+	AssertJUnit.assertTrue(driver.findElement(By.xpath("//h2[.='Our New Feature Courses']")).isDisplayed()); 
 	driver.findElement(By.xpath("(//a[.='Order'])[4]")).click();
 	}
 	@Test(priority = 3) public void Order() throws InterruptedException, Exception
@@ -39,7 +39,7 @@ public class Searchandorder {
 	String parentId = it.next(); 
 	String childId = it.next();
 	driver.switchTo().window(childId);
-	Assert.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
+	AssertJUnit.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
 	driver.findElement(By.id("inputFirstName")).sendKeys("sai"); 
 	driver.findElement(By.xpath("(//*[@id='inputFirstName'])[2]")).sendKeys("prasad g");
 	driver.findElement(By.id("inputEmail")).sendKeys("Saiprasad@gmail.com");
@@ -55,7 +55,8 @@ public class Searchandorder {
 	driver.findElement(By.xpath("//*[.='Apple']")).click(); 
 	driver.findElement(By.cssSelector("input[placeholder='no of mobiles']")).sendKeys("3");
 	WebElement dpdwn2 = driver.findElement(By.id("bought"));
-	Select sle2= new Select(dpdwn2); sle2.selectByValue("0");
+	Select sle2= new Select(dpdwn2); 
+	sle2.selectByValue("0");
 	driver.findElement(By.xpath("//*[@id='gridCheck1']")).click(); 
 	driver.findElement(By.xpath("(//*[@id='gridCheck1'])[2]")).click();
 	driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
@@ -63,4 +64,3 @@ public class Searchandorder {
 	} 
 	}
 
-	}

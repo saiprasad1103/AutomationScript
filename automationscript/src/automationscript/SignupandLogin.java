@@ -1,13 +1,12 @@
 package automationscript;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class SignupandLogin {
-	
-	public class Login extends Lanuch
+public class SignupandLogin  extends Lanuch
 	{ 
 	@Test
 	(dependsOnMethods= {"Lanching_the_Browser"})
@@ -44,4 +43,3 @@ public class SignupandLogin {
 	Thread.sleep(1000); 
 	}
 	}
-}
