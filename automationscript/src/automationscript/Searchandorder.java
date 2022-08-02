@@ -1,6 +1,7 @@
 package automationscript;
 
 import java.awt.Robot;
+import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -34,9 +35,10 @@ public class Searchandorder {
 	@Test(priority = 3) public void Order() throws InterruptedException, Exception
 	{ 
 	Set window = driver.getWindowHandles();
-	Iteratorit = window.iterator(); 
+	Iterator<String> it = window.iterator(); 
 	Thread.sleep(2000);
-	String parentId = it.next(); String childId = it.next();
+	String parentId = it.next(); 
+	String childId = it.next();
 	driver.switchTo().window(childId);
 	Assert.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
 	driver.findElement(By.id("inputFirstName")).sendKeys("soumya"); 
@@ -58,7 +60,10 @@ public class Searchandorder {
 	driver.findElement(By.xpath("//*[@id='gridCheck1']")).click(); 
 	driver.findElement(By.xpath("(//*[@id='gridCheck1'])[2]")).click();
 	driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
-	Robot ro=new Robot(); for(int i=0;i<2;i++) { ro.keyPress(KeyEvent.VK_TAB); 
+	Robot ro=new Robot(); 
+	for(int i=0;i<2;i++)
+	{ 
+		ro.keyPress(KeyEvent.VK_TAB); 
 	}
 	ro.keyRelease(KeyEvent.VK_TAB); 
 	ro.keyPress(KeyEvent.VK_ENTER); 
