@@ -44,6 +44,4 @@ public class SignupandLogin {
 	Thread.sleep(1000); 
 	}
 	}
-
-
 }

@@ -11,7 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import dev.failsafe.internal.util.Assert;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class Searchandorder {
@@ -41,18 +40,18 @@ public class Searchandorder {
 	String childId = it.next();
 	driver.switchTo().window(childId);
 	Assert.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
-	driver.findElement(By.id("inputFirstName")).sendKeys("soumya"); 
-	driver.findElement(By.xpath("(//*[@id='inputFirstName'])[2]")).sendKeys("kulkarni");
-	driver.findElement(By.id("inputEmail")).sendKeys("Sk@gmail.com");
-	driver.findElement(By.id("inputPassword")).sendKeys("Sou@123"); 
+	driver.findElement(By.id("inputFirstName")).sendKeys("sai"); 
+	driver.findElement(By.xpath("(//*[@id='inputFirstName'])[2]")).sendKeys("prasad g");
+	driver.findElement(By.id("inputEmail")).sendKeys("Saiprasad@gmail.com");
+	driver.findElement(By.id("inputPassword")).sendKeys("Sai@123"); 
 	driver.findElement(By.id("flexRadioDefault2")).click(); 
 	driver.findElement(By.xpath("//*[@placeholder='00000000000']")).sendKeys("123456");
 	driver.findElement(By.id(" address1")).sendKeys("adcdef ghij kljhg jhun"); 
 	driver.findElement(By.id("address2")).sendKeys("abcd cvgb nkhb nhh nhbbb");
-	driver.findElement(By.id("inputCity")).sendKeys("Bangalore");
+	driver.findElement(By.id("inputCity")).sendKeys("Chennai");
 	WebElement dropdown = driver.findElement(By.id("inputState")); 
-	Select sle= new Select(dropdown); sle.selectByVisibleText("Karnataka");
-	driver.findElement(By.id("inputZip")).sendKeys("560010"); 
+	Select sle= new Select(dropdown); sle.selectByVisibleText("Tamil Nadu");
+	driver.findElement(By.id("inputZip")).sendKeys("600030"); 
 	driver.findElement(By.xpath("//*[.='Apple']")).click(); 
 	driver.findElement(By.cssSelector("input[placeholder='no of mobiles']")).sendKeys("3");
 	WebElement dpdwn2 = driver.findElement(By.id("bought"));
@@ -60,6 +59,7 @@ public class Searchandorder {
 	driver.findElement(By.xpath("//*[@id='gridCheck1']")).click(); 
 	driver.findElement(By.xpath("(//*[@id='gridCheck1'])[2]")).click();
 	driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
+	
 	Robot ro=new Robot(); 
 	for(int i=0;i<2;i++)
 	{ 
@@ -72,4 +72,4 @@ public class Searchandorder {
 	} 
 	}
 
-}
+	}
