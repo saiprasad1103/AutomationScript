@@ -60,15 +60,6 @@ public class Searchandorder {
 	driver.findElement(By.xpath("(//*[@id='gridCheck1'])[2]")).click();
 	driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
 	
-	Robot ro=new Robot(); 
-	for(int i=0;i<2;i++)
-	{ 
-		ro.keyPress(KeyEvent.VK_TAB); 
-	}
-	ro.keyRelease(KeyEvent.VK_TAB); 
-	ro.keyPress(KeyEvent.VK_ENTER); 
-	ro.keyRelease(KeyEvent.VK_ENTER); 
-	Thread.sleep(2000);
 	} 
 	}
 

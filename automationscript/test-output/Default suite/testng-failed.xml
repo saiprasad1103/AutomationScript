@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automationscript.Lanuch">
+      <class name="automationscript.Searchandorder$Search">
         <methods>
           <include name="Lanching_the_Browser"/>
+          <include name="search"/>
+          <include name="Order"/>
         </methods>
-      </class> <!-- automationscript.Lanuch -->
+      </class> <!-- automationscript.Searchandorder$Search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
