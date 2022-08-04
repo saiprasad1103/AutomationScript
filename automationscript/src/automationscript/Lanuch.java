@@ -3,6 +3,7 @@ package automationscript;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,7 @@ public class Lanuch {
 	
 
 	WebDriver driver; 
-	@Test
+	@BeforeMethod
 	public void Lanching_the_Browser() 
 	{
 	
@@ -21,6 +22,12 @@ public class Lanuch {
 	driver = new ChromeDriver(); 
 	driver.get("https://mobileworld.azurewebsites.net"); 
 	driver.manage().window().maximize(); 
+	}
+	
+	@AfterMethod
+	public void browserclose()
+	{
+		driver.quit();
 	}
 }
 

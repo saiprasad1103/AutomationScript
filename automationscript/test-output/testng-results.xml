@@ -1,50 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-02T22:22:14 IST" name="Suite" finished-at="2022-08-02T22:22:47 IST" duration-ms="33157">
+  <suite started-at="2022-08-04T18:47:42 IST" name="Suite" finished-at="2022-08-04T18:48:07 IST" duration-ms="24912">
     <groups>
     </groups>
-    <test started-at="2022-08-02T22:22:14 IST" name="Test" finished-at="2022-08-02T22:22:47 IST" duration-ms="33157">
-      <class name="automationscript.SignupandLogin">
-        <test-method signature="Lanching_the_Browser()[pri:0, instance:automationscript.SignupandLogin@729d991e]" started-at="2022-08-02T22:22:14 IST" name="Lanching_the_Browser" finished-at="2022-08-02T22:22:30 IST" duration-ms="16345" status="PASS">
+    <test started-at="2022-08-04T18:47:42 IST" name="Test" finished-at="2022-08-04T18:48:07 IST" duration-ms="24912">
+      <class name="automationscript.Login">
+        <test-method is-config="true" signature="Lanching_the_Browser()[pri:0, instance:automationscript.Login@783a467b]" started-at="2022-08-04T18:47:52 IST" name="Lanching_the_Browser" finished-at="2022-08-04T18:47:55 IST" duration-ms="2458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lanching_the_Browser -->
-        <test-method signature="Sigup_for_mobiles()[pri:0, instance:automationscript.SignupandLogin@729d991e]" started-at="2022-08-02T22:22:39 IST" name="Sigup_for_mobiles" finished-at="2022-08-02T22:22:47 IST" depends-on-methods="automationscript.Lanuch.Lanching_the_Browser" duration-ms="7233" status="PASS">
+        <test-method signature="Login1()[pri:2, instance:automationscript.Login@783a467b]" started-at="2022-08-04T18:47:55 IST" name="Login1" finished-at="2022-08-04T18:47:55 IST" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login1 -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:automationscript.Login@783a467b]" started-at="2022-08-04T18:47:55 IST" name="browserclose" finished-at="2022-08-04T18:47:55 IST" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- automationscript.Login -->
+      <class name="automationscript.SignupandLogin">
+        <test-method is-config="true" signature="Lanching_the_Browser()[pri:0, instance:automationscript.SignupandLogin@5a56cdac]" started-at="2022-08-04T18:47:42 IST" name="Lanching_the_Browser" finished-at="2022-08-04T18:47:50 IST" duration-ms="7087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Lanching_the_Browser -->
+        <test-method signature="Sigup_for_mobiles()[pri:1, instance:automationscript.SignupandLogin@5a56cdac]" started-at="2022-08-04T18:47:50 IST" name="Sigup_for_mobiles" finished-at="2022-08-04T18:47:52 IST" duration-ms="2302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Sigup_for_mobiles -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:automationscript.SignupandLogin@5a56cdac]" started-at="2022-08-04T18:47:52 IST" name="browserclose" finished-at="2022-08-04T18:47:52 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
       </class> <!-- automationscript.SignupandLogin -->
-      <class name="automationscript.Lanuch">
-        <test-method signature="Lanching_the_Browser()[pri:0, instance:automationscript.Lanuch@6404f418]" started-at="2022-08-02T22:22:14 IST" name="Lanching_the_Browser" finished-at="2022-08-02T22:22:31 IST" duration-ms="17553" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Lanching_the_Browser -->
-      </class> <!-- automationscript.Lanuch -->
       <class name="automationscript.Searchandorder">
-        <test-method signature="Lanching_the_Browser()[pri:0, instance:automationscript.Searchandorder@6fd83fc1]" started-at="2022-08-02T22:22:14 IST" name="Lanching_the_Browser" finished-at="2022-08-02T22:22:29 IST" duration-ms="15423" status="PASS">
+        <test-method is-config="true" signature="Lanching_the_Browser()[pri:0, instance:automationscript.Searchandorder@272113c4]" started-at="2022-08-04T18:47:55 IST" name="Lanching_the_Browser" finished-at="2022-08-04T18:47:58 IST" duration-ms="2439" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lanching_the_Browser -->
-        <test-method signature="search()[pri:2, instance:automationscript.Searchandorder@6fd83fc1]" started-at="2022-08-02T22:22:29 IST" name="search" finished-at="2022-08-02T22:22:35 IST" duration-ms="5893" status="PASS">
+        <test-method signature="search()[pri:0, instance:automationscript.Searchandorder@272113c4]" started-at="2022-08-04T18:47:58 IST" name="search" finished-at="2022-08-04T18:48:02 IST" duration-ms="4755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method signature="Order()[pri:3, instance:automationscript.Searchandorder@6fd83fc1]" started-at="2022-08-02T22:22:35 IST" name="Order" finished-at="2022-08-02T22:22:39 IST" duration-ms="4479" status="PASS">
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:automationscript.Searchandorder@272113c4]" started-at="2022-08-04T18:48:02 IST" name="browserclose" finished-at="2022-08-04T18:48:03 IST" duration-ms="266" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Order -->
+        </test-method> <!-- browserclose -->
       </class> <!-- automationscript.Searchandorder -->
       <class name="automationscript.contactUs_page">
-        <test-method signature="Lanching_the_Browser()[pri:0, instance:automationscript.contactUs_page@32502377]" started-at="2022-08-02T22:22:14 IST" name="Lanching_the_Browser" finished-at="2022-08-02T22:22:30 IST" duration-ms="15877" status="PASS">
+        <test-method is-config="true" signature="Lanching_the_Browser()[pri:0, instance:automationscript.contactUs_page@73e9cf30]" started-at="2022-08-04T18:48:03 IST" name="Lanching_the_Browser" finished-at="2022-08-04T18:48:05 IST" duration-ms="2479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lanching_the_Browser -->
-        <test-method signature="contactUs()[pri:4, instance:automationscript.contactUs_page@32502377]" started-at="2022-08-02T22:22:30 IST" name="contactUs" finished-at="2022-08-02T22:22:37 IST" duration-ms="7274" status="PASS">
+        <test-method signature="contactUs()[pri:4, instance:automationscript.contactUs_page@73e9cf30]" started-at="2022-08-04T18:48:05 IST" name="contactUs" finished-at="2022-08-04T18:48:07 IST" duration-ms="1769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUs -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:automationscript.contactUs_page@73e9cf30]" started-at="2022-08-04T18:48:07 IST" name="browserclose" finished-at="2022-08-04T18:48:07 IST" duration-ms="371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
       </class> <!-- automationscript.contactUs_page -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

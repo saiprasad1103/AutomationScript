@@ -1,6 +1,9 @@
 package automationscript;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import java.awt.Robot;
 import java.util.Iterator;
@@ -18,41 +21,34 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 public class Searchandorder extends Lanuch 
 	{
 	@Test
-	(priority = 2) 
-	public void search() throws InterruptedException 
+	 public void search() throws InterruptedException 
+	
 	{ 
 	driver.findElement(By.xpath("//a[.='All Mobiles']")).click(); 
-	WebElement ele = driver.findElement(By.xpath("//b[.='All Mobile Details']"));
-     AssertJUnit.assertTrue(ele.isDisplayed()); 
 	driver.findElement(By.id("myInput")).sendKeys("Apple Iphone 13"); 
 	Thread.sleep(2000); 
-	JavascriptExecutor j = (JavascriptExecutor) driver; 
-	j.executeScript("window.scrollBy(0,700)"); 
-	AssertJUnit.assertTrue(driver.findElement(By.xpath("//h2[.='Our New Feature Courses']")).isDisplayed()); 
 	driver.findElement(By.xpath("(//a[.='Order'])[4]")).click();
-	}
-	@Test(priority = 3) public void Order() throws InterruptedException, Exception
-	{ 
-	Set window = driver.getWindowHandles();
+	Set<String> window = driver.getWindowHandles();
 	Iterator<String> it = window.iterator(); 
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 	String parentId = it.next(); 
 	String childId = it.next();
 	driver.switchTo().window(childId);
-	AssertJUnit.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
 	driver.findElement(By.id("inputFirstName")).sendKeys("sai"); 
 	driver.findElement(By.xpath("(//*[@id='inputFirstName'])[2]")).sendKeys("prasad g");
 	driver.findElement(By.id("inputEmail")).sendKeys("Saiprasad@gmail.com");
 	driver.findElement(By.id("inputPassword")).sendKeys("Sai@123"); 
-	driver.findElement(By.id("flexRadioDefault2")).click(); 
+	driver.findElement(By.id("flexRadioDefault1")).click(); 
 	driver.findElement(By.xpath("//*[@placeholder='00000000000']")).sendKeys("123456");
-	driver.findElement(By.id(" address1")).sendKeys("adcdef ghij kljhg jhun"); 
-	driver.findElement(By.id("address2")).sendKeys("abcd cvgb nkhb nhh nhbbb");
+	driver.findElement(By.id(" address1")).sendKeys("67/35 ayyavoo street shenoy nagar"); 
+	driver.findElement(By.id("address2")).sendKeys("67/35 ayyavoo street shenoy nagar");
 	driver.findElement(By.id("inputCity")).sendKeys("Chennai");
 	WebElement dropdown = driver.findElement(By.id("inputState")); 
 	Select sle= new Select(dropdown); sle.selectByVisibleText("Tamil Nadu");
-	driver.findElement(By.id("inputZip")).sendKeys("600030"); 
-	driver.findElement(By.xpath("//*[.='Apple']")).click(); 
+	driver.findElement(By.id("inputZip")).sendKeys("600030");
+	driver.findElement(By.xpath("//input[@rel='samsung']")).click();
+	driver.findElement(By.xpath("//*[.='Apple']")).click();
+	driver.findElement(By.xpath("(//option[@id='apple'])[2]")).click();
 	driver.findElement(By.cssSelector("input[placeholder='no of mobiles']")).sendKeys("3");
 	WebElement dpdwn2 = driver.findElement(By.id("bought"));
 	Select sle2= new Select(dpdwn2); 
@@ -60,7 +56,6 @@ public class Searchandorder extends Lanuch
 	driver.findElement(By.xpath("//*[@id='gridCheck1']")).click(); 
 	driver.findElement(By.xpath("(//*[@id='gridCheck1'])[2]")).click();
 	driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
-	
-	} 
+		} 
 	}
 
